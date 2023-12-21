@@ -33,5 +33,5 @@ jobs:
             token: ${{ secrets.TELEGRAM_TOKEN }}
             args: Docker push failure
       - name: Deploy to Gitpod
-        run: ssh -o "StrictHostKeyChecking no jay797l-dolgzadecember-4mp8fpmj09y#qSkuRPDp89l1Jf6GjtjgHooBe-CLOIEk@jay797l-dolgzadecember-4mp8fpmj09y.ssh.ws-eu107.gitpod.io"  'cd /workspace/dolgzadecember/.github/workflows && docker-compose pull && docker-compose up -d'
+        run: ssh -o "StrictHostKeyChecking no " 'jay797l-dolgzadecember-4mp8fpmj09y#qSkuRPDp89l1Jf6GjtjgHooBe-CLOIEk@jay797l-dolgzadecember-4mp8fpmj09y.ssh.ws-eu107.gitpod.io'  'cd /workspace/dolgzadecember/.github/workflows && docker-compose pull && docker-compose up -d'
       
