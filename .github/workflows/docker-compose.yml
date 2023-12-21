@@ -12,8 +12,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: GIT_HUB_ACTOR=${{ github.actor }}
+          password: GIT_HUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v4
       - run: docker build -t ghcr.io/jay797l/app-server-alpine .
       - name: pushing
