@@ -8,13 +8,12 @@ jobs:
   login:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.actor }}
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: Jay797L
-          password: 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
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v4
       - run: docker build -t ghcr.io/jay797l/app-server-alpine .
       - name: pushing
